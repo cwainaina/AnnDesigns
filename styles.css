@@ -1,0 +1,23 @@
+body{
+display: grid;
+grid-template-columns: auto;
+}
+h1{
+font-size: 2rem;
+background: #223;
+color:blueviolet
+}
+footer{
+text-align: center;
+font-size:1.5rem ;
+color:#22ffee;
+background: #223;
+
+}
+main{
+display: grid;
+grid-template-columns: auto;
+}
+.images > img{
+height: 150px;
+}
