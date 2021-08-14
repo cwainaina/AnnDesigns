@@ -21,3 +21,7 @@ grid-template-columns: auto;
 .images > img{
 height: 150px;
 }
+.images{
+display: grid;
+grid-template-columns: max-content;
+}
