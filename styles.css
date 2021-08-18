@@ -55,13 +55,35 @@ background: #23cfa7;
 border-radius: 0.5;
 padding: auto;
 }
+
 #headlog{
 align-self: center;
-
+background: #aaa;
+}
+#headlog >img{
+margin:5px;
+padding: 2px;
+align-content: center;
+float:left;
+}
+#headlog >p{
+margin:2px;
+padding: 2px;
+font-size: 1.2rem;
+align-content: center;
 }
 @media screen and (max-width:500px) {
 img{
 width: 95%;
 }
-      
+.images{
+width: 95%;
+}      
+}
+#welcome{
+align-content: center;
+text-align: center;
+font-size: 1.5rem;
+color: #444fff;
+text-decoration: underline;
 }
