@@ -1,6 +1,25 @@
 body{
-display: grid;
-grid-template-columns: auto;
+grid: grid;
+grid: "header" 5em
+      "main" 20em
+      "footer" 5em/ 1fr;
+height:200px;
+}
+@media screen and (min-width:600px) {
+    body{
+grid: grid;
+grid: "header header" 5em
+      "main main" 20em
+      "footer footer" 5em/ 1fr 2fr;
+}
+}
+@media screen and (min-width:800px) {
+    body{
+grid: grid;
+grid: "header header header" 5em
+      "main main main" 20em
+      "footer footer footer" 5em/ 1fr 2fr 1fr;
+}
 }
 h1{
 font-size: 2rem;
@@ -12,16 +31,31 @@ text-align: center;
 font-size:1.5rem ;
 color:#22ffee;
 background: #223;
-
 }
 main{
 display: grid;
-grid-template-columns: auto;
+margin: 1em;
+grid-column-end: span 2;
+
 }
-.images > img{
-height: 150px;
+img{
+height: 200px;
 }
-.images{
+.images img{
+border-radius: 0.25;
+grid-column: span 3;
+}
+.images {
+grid-column: 1 /-1;
 display: grid;
-grid-template-columns: max-content;
+grid-template-columns:repeat(12, 1fr);
+grid-row-gap: 0.5em;
+grid: gaps 0.5em;
+background: #23cfa7;
+border-radius: 0.5;
+padding: auto;
+}
+#headlog{
+align-self: center;
+
 }
