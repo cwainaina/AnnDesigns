@@ -41,20 +41,7 @@ grid-column-end: span 2;
 img{
 height: 200px;
 }
-.images img{
-border-radius: 0.25;
-grid-column: span 3;
-}
-.images {
-grid-column: 1 /-1;
-display: grid;
-grid-template-columns:repeat(12, 1fr);
-grid-row-gap: 0.5em;
-grid: gaps 0.5em;
-background: #23cfa7;
-border-radius: 0.5;
-padding: auto;
-}
+
 
 #headlog{
 align-self: center;
@@ -72,11 +59,7 @@ padding: 2px;
 font-size: 1.2rem;
 align-content: center;
 }
-@media screen and (max-width:500px) {
-img,.images{
-width: 95%;
-}
-}
+
 #welcome{
 align-content: center;
 text-align: center;
