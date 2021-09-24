@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Bethany' Pie Shop!</title>
+    <meta name="author" content="Bethany's Pie Shop">
+    <meta name="description" content="Store front for Bethany's Pie Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #leftmenu{
+width: 20%;
+        }
+        #main{
+            width: 80%;
+        }
+        li{
+            color: #774dac;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function save(){
+            localStorage.setItem("chefCoat",true);
+        }
+        window.onload = function(){
+            let favorite = document.getElementById('favorite');
+            if(window.localStorage)
+            {
+                let storage = window.localStorage;
+                if(storage.getItem('chefCoat')=='true')
+                {
+                    favorite.innerHTML="You liked the coat";
+                }
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <img src="images/sewing-machine.svg" height="55" />
+        </nav>
+    </header>
+
+    <div style="width:1000px;margin-left: auto;margin-right: auto;">
+        <aside id="leftmenu" width="20%">
+           <a href="index.html"><img src="images/TailorLogo.jfif" /></a>
+            <header>
+                <h4 style="text-align: center;">Browse our Uniforms</h4>
+            </header>
+            <input type="search" class="searchbox" placeholder="Search our store" />
+<li><a href="#ChoseJacket">know what You need</a></li>
+        </aside>
+        <main id="main" witdh="80%">
+            <article>
+                <header>
+                    <h1 style="font-size:35px;color:#a593c2">Chef Coat</h1>
+                </header>
+                <figure>
+                    <a href="images/ann13.jpg"><img src="images/Ann13.jpg" width="600" alt="Apple pie" />
+                    </a>
+                    
+                    <figcaption>The popular chef coat</figcaption>
+                </figure>
+
+                <p>
+                    <button onclick="save()" type="button">save as favorite</button>
+                    <span id="favorite"></span>
+                </p>
+
+
+                <div style="background-color:#f8f4f1;">
+                    <strong>Price: $2250.95</strong>
+                    <h2>Description</h2>
+                    <p>
+                        The chef's coat is a double-breasted white jacket typically made of two layers of thick
+                         <em> cotton</em> It is fairly common in finer restaurants to
+                          see all kitchen staff wearing a similar uniform: the chef's coat, black and white checked pants, and a chef hat..
+                    </p>
+                    <p>
+                        The double layering of the chef's coat helps provides resistance to heat. Buttons may either be made of 
+                        plastic or cotton. The reason behind the cotton buttons is quite simple. They tend to withstand the
+                         frequent washings of the coat better than plastic buttons.
+                    </p>
+                    <p>
+                        <blockquote>
+                            Since cooking is a messy business, the double-breasted style of the chef's coat serves an important purpose
+                        </blockquote>
+                    </p>
+
+                    <p><smallI> makes the garment reversible so that stains are not visible.</small></p>
+                    <p><small>This fabric makes the chef's coat more breathable and thus more comfortable. As well,
+                         the white color can be bleached to wash out difficult stains and to keep the chef's coat looking perfectly white.</small></p>
+                    <hr>
+
+                    <h2>Why we need this Coat</h2>
+                    <ol>
+                        <li>
+                            it can do a fine job making sure that your sleeve doesn’t catch on fire or that the steam
+                             hits your jacket instead of your skin.
+                        </li>
+                        <li> The thick fabric can prevent a sharp tool from tearing the jacket and your skin, and it 
+                            can prevent boiling hot liquids from giving you serious burns.
+                        </li>
+                        <li>if you spill something on yourself, but find that you need to leave the kitchen, you can simply 
+                            unbutton the coat and switch the stained layer with the fresh, clean layer. The thick fabric ensures
+                             that the bottom layer is stain free, so no one has to know that you’ve got marinara or gravy stains on your
+                             jacket. If you don’t do a lot of messy cooking, single breasted jackets are also available.
+                        </li>
+                        <li> It also signals that the wearer is a professional that takes his career seriously.
+                        </li>
+                    </ol>
+
+                    
+                    <h3><u id="ChoseJacket"> Choosing the Right Chef’s Jacket</u></h3>
+                    <p>Now that you know why you need a chef’s jacket, how are you supposed to know which one you need?</p>
+                    <ul>
+                        <li>Buy the highest quality jacket you can afford. Like every product available these days, you can buy a cheap,
+                             inferior chef’s jacket, but it will look cheap, and probably won’t perform the most important duty of
+                              keeping you safe. In addition, jackets and other uniform pieces
+                             made of inferior materials are often itchy and uncomfortable, which can be distracting when you’re
+                              trying to get dinner service going.</li>
+                        <li>Buy a jacket that fits. While you may think it’s more comfortable to buy a bigger jacket, loose fabric 
+                            and sleeves that are too long are asking for accidents. Also, an ill fitting jacket just doesn’t
+                             look as professional. If you’re a woman, make sure to buy a jacket that is designed for a woman 
+                             for the best fit.</li>
+                        <li>Care for your jacket properly. This means treating stains right away if possibler</li>
+                        <li> Even though you may be tired after a long shift, take your jacket off and hang it up 
+                            to prevent wrinkles. Wash your jacket only as necessary to prolong the fabric</li>
+                        <li>consider embroidering your restaurant logo on your jacket if you’re sure you’re not
+                             going anywhere anytime soon, or you are the owner of the restaurant.</li>
+                        <li>Buy an extra jacket if funds allow. Your jacket will get spilled on, pulled, and maybe even burned. 
+                            Having an extra jacket on hand allows you to seamlessly continue working with a simple switch of coats</li>
+                        
+                    </ul>
+                </div>
+
+            </article>
+
+           
+        </main>
+
+       <!--******************************The footer************************************-->
+<footer>
+    <p>Our address is <address>Ann's Tailoring Shop -Toll shopping center, Ruiru
+    <p id="mobile">Contacts: 0727633559</p>
+    <p id="Email">Email: AnnWairish2014@gmail.com</p></address></p>
+    <small>&copy;2021 Ann's tailoring Shop -All rights reserved</small>
+    </address>
+    
+    </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>
