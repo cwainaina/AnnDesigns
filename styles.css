@@ -21,6 +21,8 @@ nav {
 height: 70px;
 width: 1000px;
 margin: 0 auto 20px;
+padding-top: 50x;
+text-decoration: none;
 }
 #leftmenu{
 float: left;
@@ -85,4 +87,7 @@ main > article>header>h1{
     padding: 2%;
     float: right;
     
+}
+#leftmenu > img {
+    width: 98%;
 }
