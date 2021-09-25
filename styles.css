@@ -14,7 +14,8 @@ background-color: #a593c2;
 h1{
 font-size: 2rem;
 background: #223;
-color:blueviolet
+color:blueviolet;
+margin: 2%;
 }
 nav {
 height: 70px;
@@ -77,9 +78,11 @@ iframe{
     padding: auto;
     margin: 20px;
 }
-h1{
+main > article>header>h1{
     text-align: center;
-    width: 80%;
-    margin: 2%;
+    width: 90%;
+    margin: 0.5%;
     padding: 2%;
+    float: right;
+    
 }
