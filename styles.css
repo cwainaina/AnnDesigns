@@ -7,7 +7,7 @@ background-color: #747371;
 font-size: 1.4rem;
 background-image: url('images/pattern.png');
 }
-#myheader{
+#mainheader{
 background-color: #a593c2;
 
 }
@@ -58,8 +58,28 @@ article header h1{
 color:#ffee23
 }
 
+nav>ul>li a{
+    float:left;
+}
 
 header,section,footer,aside,nav,main,article,figure{
 display:block;
 }
-
+a{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 10px;
+}
+table{
+    border: 1px solid black;
+}
+iframe{
+    padding: auto;
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    width: 80%;
+    margin: 2%;
+    padding: 2%;
+}
