@@ -3,16 +3,30 @@ table, td,th{
     border-collapse: collapse;
     padding: 5px;
 }
-@media screen and (min-width:500px){
+th,td{
+    font-size: 1.5rem;
+    background-color: burlywood;
+}
+table caption{
+    color:rgb(3, 37, 20);
+    font-size: 1.5rem;
+}
+table:nth-child(odd){
+    background-color: rgb(18, 4, 44);
+}
+@media screen and (max-width:500px){
 table{
     width: fit-content;
     }
     th,td{
         font-size: 1.5rem;
-        background-color: burlywood;
+        background-color: rgb(137, 214, 258);
     }
     table caption{
         color:rgb(3, 37, 20);
         font-size: 1.5rem;
+    }
+    table:nth-child(2n+1){
+        background-color: rgb(18, 4, 44);
     }
 }
