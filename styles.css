@@ -11,12 +11,10 @@ background-image: url('images/pattern.png');
 background-color: #a593c2;
 
 }
-h1{
-font-size: 2rem;
-background: #223;
-color:blueviolet;
-margin: 2%;
+#main >article > header{
+    width: 100%;
 }
+
 nav {
 height: 70px;
 width: 1000px;
@@ -58,21 +56,15 @@ background-color: #747371;
 
 }
 article header h1{
-color:#ffee23
+color:#ed9b63;
+text-align: left;
+
 }
 
 nav>ul>li a{
     float:left;
 }
 
-header,section,footer,aside,nav,main,article,figure{
-display:block;
-}
-a{
-    font-size: 1.5rem;
-    font-weight: bolder;
-    padding: 10px;
-}
 table{
     border: 1px solid black;
 }
@@ -80,14 +72,50 @@ iframe{
     padding: auto;
     margin: 20px;
 }
-main > article>header>h1{
+#main > article > header >h1{
     text-align: center;
     width: 90%;
     margin: 0.5%;
     padding: 2%;
-    float: right;
-    
+        
 }
-#leftmenu > img {
-    width: 98%;
+aside > img {
+    width: 20%;
 }
+@media screen and (max-width:500px){
+
+    #main{
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        
+        } 
+
+        #leftmenu{
+            width: 100%;
+            margin-bottom: 10px;
+            }
+            #leftmenu>img{
+                width: auto;
+            }
+            body{
+                padding: 10px;
+                padding-right: 10px;
+                width: 95%;
+            }
+            aside h4{
+                text-align: left;
+                color: aqua;
+            }
+          #main  article header h1{
+                color:#125a30;
+                text-align:left;
+                padding: auto;
+                font-size: 1.7rem;
+                }
+                .content{
+                    width: 45%;
+                    color:#05010c;
+                    font-size: 1.5rem;
+                }
+            }
