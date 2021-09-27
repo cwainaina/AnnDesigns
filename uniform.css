@@ -1,0 +1,56 @@
+article{
+    width: 75%;
+}
+
+#main{
+    float: right;
+    width: 69%;
+}
+#leftmenu{
+    float:left;
+    width: 28%;
+}
+.coat{
+    width: 100px;
+    height: 80px;
+    padding:10px;
+    margin: 10px;
+    background-color: #fff;
+    border:solid 1px #ccc;
+}
+.coat img{
+width: 100%;
+}
+.coat.title{
+    font-weight: bold;
+}
+.coat.columns{
+    width: 100%;
+}
+.coat.price{
+    text-align:right;
+}
+.coat.columns div {
+    width: 50%;
+}
+.coat  button{
+    background-color: #f6aeae;
+    padding: 10px;
+    border:solid 1px #f6aeae;
+    border-radius: 3px;
+    color:#fff;
+}
+.columns{
+    display: block;
+}
+
+/*Media queries*/
+@media only screen and (min-width:768px){
+    
+    aside{
+        margin-left:2%;
+    }
+    .columns-desktop {
+        display: flex;
+    }
+}
