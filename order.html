@@ -1,12 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>make orders</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="images/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="stylesheet" href="bootstrap.css">
+<title>Shakaina work Uniforms</title>
+<style>
+    @media only screen and (min-width:768px){
+        article{
+            width: 350px;
+        }
+    }
+    nav>ul>li>a{
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    .input-group{
+        margin-bottom: 20px;
+    }
+    .input-group input,
+    .input-group textarea,
+    .input-group select{
+        padding: 10px;
+        border: solid 1px #999;
+        border-radius: 2px;
+        width: 100%;
+        margin-right: 15px;    }
+    label{
+        font-weight: 600;
+    }
+    input[type="reset"]{
+        background: transparent;
+        border:0;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    input[type="reset"]{
+        border: solid 1px #999;
+        border-radius: 3px;
+        padding:10px;
+            }
+</style>
 </head>
 <body>
-    
+    <!--*******************************The Header***************************-->
+<header id="mainheader">
+<nav>
+<a href="index.html">
+<img src="images/sewing-machine.svg" height="55" width="50" alt="icon">
+</a>
+<ul>
+   <li><a href="index.html">Home</a></li> 
+   <li><a href="DesignOverview.html">Samples</a></li>
+   <li><a href="clothDetails">Details</a></li>
+   <li><a href="about.html">About</a></li>
+   <li><a href="order.html">Order</a></li>
+   <li><a href="contacts">Contact us</a></li>
+</ul>
+</nav>
+</header>
+<!--****************************The main block*****************************-->
+<main id="main">
+<aside><img src="images/TailorLogo.jfif"  alt="Buss Logo" /></aside>
+    <article>
+        <h1>Order</h1>
+        <div class="coat">
+            <img src=""/>
+            <div class="columns">
+                <div class="title"></div>
+                <div class="price"></div>
+            </div>
+            <p class="desc"></p>
+        </div>
+        <form action="http://localhost:5501/api/post" method="POST">
+            <input type="hidden" id="coatOrder" name="coatOrder"/>
+            <input type="hidden" id="location" name="location"/>
+ <div class="input-group">
+ <div><label for="first-name">First Name</label></div>
+ <div><input type="text" name="first-name" eid="first-name" /></div>
+</div>
+<div class="input-group">
+    <div><label for="first-name">Last Name</label></div>
+    <div><input type="text" name="first-name" eid="last-name" /></div>
+   </div>
+<div class="input-group">
+    <div><label for="address">Address</label></div>
+    <div><input type="text" name="address" id="address" /></div>
+   </div>
+   <div class="input-group">
+    <div><label for="address">State</label></div>
+    <div>
+   <select name="state" id="state">
+       <option value="" selected>[ Select one]</option>
+       <option value="Alabama">Alabama</option>
+       <option value="thika">Thika</option>
+       <option value="kiambu">Kiambu</option>
+       <option value="ruiru">Ruiru</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+       <option value="Alabama">Alabama</option>
+   </select>
+</div>
+
+<div class="input-group">
+    <div><label for="postal-code">Postal Code</label></div>
+    <div><input type="text" name="postal-code" id="postal-code" /></div>
+   </div>
+
+   <div class="input-group">
+       <div><label for="comments">comments</label></div>
+   <div>
+   <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+   </div>
+   </div>
+   <input type="reset" value="Reset" />
+   <input type="submit" value="Submit" />
+        </form>
+
+    </article>    
+</main>
+
+</div>
+<!--******************************The footer************************************-->
+<footer>
+    <nav>
+        <ul>
+    <li><a href="index.html">Home</a></li> 
+    <li><a href="order.html">Order</a></li>
+    <li><a href="contacts">Contact us</a></li>
+        </ul>
+    </nav>
+Our address is 
+<address>Shakainah Work Uniforms Shop -Toll shopping center, Ruiru</address>
+<address>
+<p id="mobile">Contacts: 0727633559</p>
+<p id="Email">Email: AnnWairish2014@gmail.com</p>
+<small>&copy;2021 Ann's tailoring Shop -All rights reserved</small>
+</address>
+</footer>
 </body>
+<script>
+    window.addEventListener("DOMContentLoaded",function(e){
+        let locationBox = document.querySelector("#location");
+        let location={
+            latitude:"unknown",
+            longitude:"unknown"
+        };
+        window.navigator.geolocation.getCurrentPosition(
+            function(position){
+                location={
+                    latitude:position.coords.latitude,
+                    longitude:position.coords.longitude
+                };
+                locationBox.value=JSON.stringify(location);
+            },
+            function(error){
+
+            });
+
+        const order = localStorage.getItem("order");
+
+        if(order){
+            const coatOrder = JSON.parse(order);
+const orderInput = document.querySelector("#coatOrder");
+orderInput.value=order;
+            const coat = document.querySelector(".coat");
+
+            const title = coat.querySelector(".title");
+            const price = coat.querySelector(".price");
+            const desc = coat.querySelector(".desc");
+
+            title.innerText = coatOrder.title;
+            price.innerText = coatOrder.price;
+            desc.innerText = coatOrder.desc;
+
+            const img = coat.querySelector("img");
+            img.setAttribute("src",`images/${coatOrder.id}.jpg`);
+            img.setAttribute("alt", coatOrder.title);
+        }
+    });
+</script>
 </html>
+

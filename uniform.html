@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="images/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="stylesheet" href="uniform.css">
+<!--<link rel="stylesheet" href="uniform.css">-->
 <title>Uniforms | Shakaina work Uniforms</title>
 </head>
 <body>
@@ -27,21 +27,7 @@
 <div style="width: 1000px;margin-left: auto;margin-right: auto;">
 <aside id="leftmenu">
     <img src="images/TailorLogo.jfif"  alt="Buss Logo" />
- <header>
-<h4>Browse our Uniforms</h4>
-</header>
-<input type="search" class="searchbox" placeholder="Search our store" /><br>
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="DesignOverview.html">Sample Designs</a> </li>
-    <li><a href="ClothDetails.html">Details</a> </li>
-    <li> <a href="order.html">Make Your Order</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contacts.html">Contact Us</a></li>
-    <li><a href="uniform.html"></a></li>
-      
-
-    </ul> 
+ 
 
 </aside>
 <!--****************************The main block*****************************-->
@@ -55,7 +41,7 @@
                     <div class="price">Kshs1195.99/-</div>
                 </div>
                 <p class="desc">Our famous dust coat</p>
-                <button data-order="dust-coat">Order</button>
+                <button data-order="Ann13">Order</button>
           </div>
 
           <div class="coat">
@@ -65,7 +51,7 @@
                 <div class="price">Kshs1395.99/-</div>
             </div>
             <p class="desc">Hotel classic</p>
-            <button data-order="hotel-coat">Order</button>
+            <button data-order="Ann7">Order</button>
             </div>
         </section>
     </article>
@@ -82,5 +68,33 @@ Our address is
 </address>
 </footer>
 </body>
+<script>
+    window.addEventListener("DOMContentLoaded",function(e){
+        const orderButtons = document.querySelectorAll("button[data-order]");
+        
+    orderButtons.forEach(function(button) {
+        button.addEventListener("click", function(e){
+            const button = e.currentTarget;
+            const container = button.parentNode;
+
+            const order = {
+            id:button.getAttribute("data-order"),
+            title: container.querySelector(".title").innerText,
+            price: container.querySelector(".price").innerText,
+            desc: container.querySelector(".desc").innerText
+        };
+        localStorage.setItem("order",JSON.stringify(order));
+        
+        const url = window.location.href.replace("uniform.html","order.html");
+        window.location.href=url;
+        });       
+
+  });
+
+    });
+
+</script>
+
+
 </html>
 
